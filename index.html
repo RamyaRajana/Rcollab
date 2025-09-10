@@ -1,164 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Library</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>📚 Digital Library</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Categories</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Sweet Crumbs Bakery</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="library">
-        <h2>Available Books</h2>
-        <div class="book-grid">
+  <section class="hero">
+    <div class="container">
+      <h2>Freshly Baked with Love</h2>
+      <p>Delicious cakes, pastries, and bread served daily.</p>
+    </div>
+  </section>
 
-            <!-- Example Book Card -->
-            <div class="book-card">
-                <img src="https://via.placeholder.com/150x220?text=Book+1" alt="Book 1">
-                <h3>Book Title 1</h3>
-                <p>Author Name</p>
-                <a href="#" class="btn">Read / Download</a>
-            </div>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Welcome to Sweet Crumbs, your neighborhood bakery where tradition meets taste. We bake daily using only the finest ingredients.</p>
+    </div>
+  </section>
 
-            <div class="book-card">
-                <img src="https://via.placeholder.com/150x220?text=Book+2" alt="Book 2">
-                <h3>Book Title 2</h3>
-                <p>Author Name</p>
-                <a href="#" class="btn">Read / Download</a>
-            </div>
-
-            <div class="book-card">
-                <img src="https://via.placeholder.com/150x220?text=Book+3" alt="Book 3">
-                <h3>Book Title 3</h3>
-                <p>Author Name</p>
-                <a href="#" class="btn">Read / Download</a>
-            </div>
-
-            <!-- Add more book cards as needed -->
-
+  <section id="menu" class="section">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Chocolate Cake</h3>
+          <p>$4.99</p>
         </div>
-    </section>
+        <div class="menu-item">
+          <h3>Croissant</h3>
+          <p>$2.49</p>
+        </div>
+        <div class="menu-item">
+          <h3>Blueberry Muffin</h3>
+          <p>$3.25</p>
+        </div>
+        <div class="menu-item">
+          <h3>Sourdough Bread</h3>
+          <p>$5.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Digital Library. All rights reserved.</p>
-    </footer>
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📍 123 Bakery Lane, Sweetville<br>
+         📞 (123) 456-7890<br>
+         ✉️ hello@sweetcrumbs.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sweet Crumbs Bakery. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
 <style>
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff8f0;
 }
 
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
 header {
-    background-color: #4a4e69;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #d2691e;
+  color: white;
+  padding: 20px 0;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
 }
 
 nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.library {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
 }
 
-.library h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #22223b;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+.hero p {
+  font-size: 1.2rem;
 }
 
-.book-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+/* Sections */
+.section {
+  padding: 60px 0;
 }
 
-.book-card:hover {
-    transform: translateY(-5px);
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #d2691e;
 }
 
-.book-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.book-card h3 {
-    margin: 10px 0 5px;
-    color: #2a2a2a;
+.menu-item {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ffd9b3;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.book-card p {
-    font-size: 0.9em;
-    color: #666;
+/* Contact */
+.contact p {
+  font-size: 1.1rem;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #4a4e69;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #22223b;
-}
-
+/* Footer */
 footer {
-    background-color: #22223b;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
+  background-color: #d2691e;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
